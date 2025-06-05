@@ -1,0 +1,104 @@
+{
+  "predictions": [
+    {
+      "description": "Franco da Rocha - São Paulo, SP, Brasil",
+      "place_id": "1",
+      "geometry": {
+        "location": {
+          "lat": -23.3229,
+          "lng": -46.726
+        }
+      }
+    },
+    {
+      "description": "Caieiras - São Paulo, SP, Brasil",
+      "place_id": "2",
+      "geometry": {
+        "location": {
+          "lat": -23.3665,
+          "lng": -46.7466
+        }
+      }
+    },
+    {
+      "description": "Francisco Morato - São Paulo, SP, Brasil",
+      "place_id": "3",
+      "geometry": {
+        "location": {
+          "lat": -23.2792,
+          "lng": -46.7444
+        }
+      }
+    },
+    {
+      "description": "Av. Pacaembu - Franco da Rocha, SP, Brasil",
+      "place_id": "4",
+      "geometry": {
+        "location": {
+          "lat": -23.3228,
+          "lng": -46.7261
+        }
+      }
+    },
+    {
+      "description": "Centro - Franco da Rocha, SP, Brasil",
+      "place_id": "5",
+      "geometry": {
+        "location": {
+          "lat": -23.3224,
+          "lng": -46.7263
+        }
+      }
+    },
+    {
+      "description": "Vila dos Comerciários - Franco da Rocha, SP, Brasil",
+      "place_id": "6",
+      "geometry": {
+        "location": {
+          "lat": -23.3307,
+          "lng": -46.7268
+        }
+      }
+    },
+    {
+      "description": "Jardim Luciana - Franco da Rocha, SP, Brasil",
+      "place_id": "7",
+      "geometry": {
+        "location": {
+          "lat": -23.3316,
+          "lng": -46.7235
+        }
+      }
+    },
+    {
+      "description": "Parque Monte Verde - Caieiras, SP, Brasil",
+      "place_id": "8",
+      "geometry": {
+        "location": {
+          "lat": -23.3667,
+          "lng": -46.7464
+        }
+      }
+    },
+    {
+      "description": "Jardim dos Pinheiros - Francisco Morato, SP, Brasil",
+      "place_id": "9",
+      "geometry": {
+        "location": {
+          "lat": -23.2791,
+          "lng": -46.7445
+        }
+      }
+    },
+    {
+      "description": "Vila Bela - Franco da Rocha, SP, Brasil",
+      "place_id": "10",
+      "geometry": {
+        "location": {
+          "lat": -23.3218,
+          "lng": -46.7259
+        }
+      }
+    }
+  ]
+}
