@@ -1,0 +1,23 @@
+@import url(../global.css);
+@import url(../partials/authUser.css);
+
+.auth-box {
+  max-width: 500px;
+  padding: 40px;
+}
+
+.forgot-password {
+  align-self: flex-start;
+  color: #666;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.forgot-password:hover {
+  color: var(--accent-color);
+}
+
+.shake {
+  animation: shake 0.35s ease;
+}

@@ -1,0 +1,111 @@
+@import url(about/default.css);
+@import url(hero/default.css);
+@import url(partner/default.css);
+
+/* Estilos para sugestões do Google Places */
+.pac-container {
+  margin-top: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  font-family: inherit;
+  z-index: 1000;
+}
+
+.pac-item {
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.pac-item:hover {
+  background-color: #f8f9fa;
+}
+
+.pac-item-query {
+  font-size: 14px;
+  color: #333;
+}
+
+.pac-matched {
+  font-weight: bold;
+}
+
+.pac-icon {
+  display: none;
+}
+
+/* Campo de busca */
+.search {
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1001;
+}
+
+.search #searchAddress {
+  position: relative;
+  width: 100%;
+}
+
+.address-suggestions {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1002;
+}
+
+.suggestion-item {
+  padding: 10px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+  color: #333;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.restrictions {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Estilos para o dropdown do autocomplete */
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #f5f5f5;
+}
+
+.search-inputs {
+  position: relative;
+}

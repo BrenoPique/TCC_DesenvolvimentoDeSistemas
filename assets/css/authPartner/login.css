@@ -1,0 +1,76 @@
+@import url("../partials/authPartner.css");
+
+.login-container {
+  width: 60%;
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.login-header h1 {
+  color: #39b54a;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.forgot-password {
+  color: #666;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  margin: 2rem 0;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #39b54a;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.register-link a {
+  color: #39b54a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #0097b2;
+}
+
+@media screen and (max-width: 1024px) {
+  .login-container {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .login-header p {
+    font-size: 1.4rem;
+  }
+}

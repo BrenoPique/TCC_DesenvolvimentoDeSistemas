@@ -1,0 +1,560 @@
+/* Layout Principal */
+.menu-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Cabeçalho do Restaurante */
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.restaurant-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.restaurant-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.favorite-btn,
+.review-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-btn i {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.favorite-btn.is-favorite i {
+  color: #ff4b4b;
+}
+
+.review-btn i {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.favorite-btn:hover,
+.review-btn:hover {
+  transform: scale(1.1);
+}
+
+.review-btn:hover i {
+  color: #ffd700;
+}
+
+.restaurant-info {
+  flex: 1;
+}
+
+.restaurant-info h1 {
+  font-size: 2rem;
+  color: #2d3436;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.restaurant-details {
+  color: #636e72;
+  font-size: 0.95rem;
+}
+
+.restaurant-details p {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.restaurant-details i {
+  margin-right: 0.75rem;
+  color: #0097b2;
+}
+
+.restaurant-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de Pratos */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Card do Prato */
+.menu-item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem do Prato */
+.item-image {
+  height: 220px;
+  width: 100%;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-item:hover .item-image img {
+  transform: scale(1.05);
+}
+
+/* Informações do Prato */
+.item-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item-info h3 {
+  font-size: 1.25rem;
+  color: #2d3436;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.item-description {
+  color: #636e72;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Rodapé do Card */
+.item-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #edf2f7;
+}
+
+.price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0097b2;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0097b2, #7ed957);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Restrições */
+.item-restrictions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.restriction-tag {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0097b2, #7ed957);
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 151, 178, 0.2);
+  transition: all 0.2s ease;
+}
+
+.restriction-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 151, 178, 0.3);
+}
+
+/* Mensagem de Nenhum Prato */
+.no-dishes {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  color: #636e72;
+  font-size: 1rem;
+}
+
+/* Filtros */
+.menu-filters {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.menu-filters h3 {
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin-bottom: 1rem;
+}
+
+.filter-restrictions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.filter-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.filter-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 151, 178, 0.1);
+}
+
+.filter-item input[type="checkbox"] {
+  display: none;
+}
+
+.filter-item input[type="checkbox"]:checked + span {
+  color: white;
+}
+
+.filter-item:has(input[type="checkbox"]:checked) {
+  background: linear-gradient(135deg, #0097b2, #7ed957);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 151, 178, 0.2);
+}
+
+/* Reviews Section */
+.recent-activities {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 3rem;
+}
+
+.recent-activities h2 {
+  font-size: 1.5rem;
+  color: #2d3436;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #edf2f7;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #edf2f7;
+}
+
+.review-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 151, 178, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ffd700;
+  text-shadow: 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.review-date {
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.review-text {
+  color: #2d3436;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #636e72;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #edf2f7;
+  font-size: 1rem;
+}
+
+/* Review Modal */
+.review-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #edf2f7;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: #2d3436;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #636e72;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #2d3436;
+}
+
+.rating-select {
+  margin-bottom: 1.5rem;
+}
+
+.rating-select label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+  font-weight: 500;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input[type="radio"]:checked ~ label {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+  font-weight: 500;
+}
+
+.form-group textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0097b2;
+}
+
+.submit-review {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0097b2, #7ed957);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-review:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 151, 178, 0.3);
+}
+
+#popup-container {
+  position: fixed;
+  top: 1vh;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-page {
+    padding: 1rem;
+  }
+
+  .restaurant-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .restaurant-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  .item-image {
+    height: 200px;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .restriction-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .filter-item {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .recent-activities {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .review-item {
+    padding: 1.2rem;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .stars label {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,192 @@
+@import url(../global.css);
+
+.upgrade {
+  min-height: 85vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f0f2f5, #e2f3ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 2rem;
+  padding: 4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.upgrade-header h1 {
+  color: #37b24d;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.upgrade-header p {
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.plan-details {
+  background: #f8f9fa;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.plan-price {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.price {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #37b24d;
+}
+
+.period {
+  font-size: 2rem;
+  color: #666;
+}
+
+.features-list {
+  margin-bottom: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+.feature-item img {
+  width: 2rem;
+  filter: invert(57%) sepia(82%) saturate(395%) hue-rotate(93deg)
+    brightness(92%) contrast(89%);
+}
+
+.feature-item span {
+  font-size: 1.4rem;
+  color: #495057;
+}
+
+.payment-details {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.payment-details h2 {
+  font-size: 2rem;
+  color: #37b24d;
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #495057;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1.2rem;
+  border: 2px solid #e9ecef;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #37b24d;
+  box-shadow: 0 0 0 4px rgba(55, 178, 77, 0.1);
+}
+
+.btn-upgrade {
+  width: 100%;
+  padding: 1.6rem;
+  background: linear-gradient(135deg, #37b24d, #339af0);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.btn-upgrade:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(55, 178, 77, 0.2);
+}
+
+@media (max-width: 768px) {
+  .upgrade-container {
+    padding: 3rem 2rem;
+  }
+
+  .plan-details {
+    padding: 2rem;
+  }
+
+  .upgrade-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .upgrade-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .upgrade-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .price {
+    font-size: 3.6rem;
+  }
+
+  .period {
+    font-size: 1.6rem;
+  }
+
+  .feature-item span {
+    font-size: 1.3rem;
+  }
+}

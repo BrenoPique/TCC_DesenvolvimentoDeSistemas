@@ -1,0 +1,279 @@
+@import url(../global.css);
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+  background: #f8f9fa;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-message h1 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-message p {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(57, 181, 74, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon img {
+  width: 25px;
+  filter: invert(57%) sepia(82%) saturate(395%) hue-rotate(93deg)
+    brightness(92%) contrast(89%);
+}
+
+.stat-info h3 {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-period {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.stat-period {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.recent-activities {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.recent-activities h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.activity-item:hover {
+  background: #f0f0f0;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: rgba(57, 181, 74, 0.1);
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+.activity-time {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.activity-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #39b54a;
+}
+
+.no-activities {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.8rem;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-date {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  color: #333;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.no-reviews {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .nav-item {
+    white-space: nowrap;
+  }
+
+  .logout {
+    margin-top: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

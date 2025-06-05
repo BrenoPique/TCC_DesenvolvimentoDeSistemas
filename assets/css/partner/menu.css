@@ -1,0 +1,453 @@
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-content h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.header-content p {
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.btn-add-prato {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  justify-self: center;
+}
+
+.btn-add-prato:hover {
+  background: #0056b3;
+}
+
+.btn-add-prato img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.pratos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.prato-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.prato-card:hover {
+  transform: translateY(-5px);
+}
+
+.prato-img {
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.prato-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prato-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  padding-bottom: 80px; /* Espaço para o preço */
+}
+
+.prato-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.prato-descricao {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 16px 0; /* Margem abaixo da descrição */
+  overflow-y: auto; /* Permite scroll se o texto for muito longo */
+  max-height: 200px; /* Altura máxima antes do scroll */
+}
+
+.prato-restrictions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 16px; /* Espaço entre as restrições e o preço */
+}
+
+.restriction-tag {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  background: var(--primary-gradient, linear-gradient(45deg, #0097b2, #7ed957));
+  color: white;
+  font-weight: 500;
+  white-space: nowrap; /* Evita quebra de texto nas tags */
+}
+
+.prato-preco {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  padding: 10px 0;
+  background: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee; /* Linha separadora opcional */
+}
+
+/* Estilização dos botões de ação */
+.prato-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+.btn-edit img,
+.btn-delete img {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: brightness(0) invert(1);
+}
+
+/* Modal de edição/exclusão */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* Estilos do formulário */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-group textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.btn-save {
+  width: 100%;
+  padding: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-save:hover {
+  background: #0056b3;
+}
+
+/* Modal de Exclusão */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-cancel,
+.btn-confirm-delete {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cancel {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.btn-cancel:hover {
+  background: #dde2e6;
+}
+
+.btn-confirm-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-confirm-delete:hover {
+  background: #c82333;
+}
+
+/* Grid de Restrições */
+.restrictions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.restriction-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.8rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  user-select: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.restriction-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #ccc;
+}
+
+.restriction-item input[type="checkbox"] {
+  display: none; /* Esconde o checkbox */
+}
+
+.restriction-item input[type="checkbox"]:checked + span {
+  font-weight: 600;
+}
+
+/* Altera o estilo quando o checkbox está marcado */
+.restriction-item input[type="checkbox"]:checked ~ * {
+  color: white;
+}
+
+.restriction-item input[type="checkbox"]:checked + span {
+  color: white;
+}
+
+.restriction-item:has(input[type="checkbox"]:checked) {
+  background: var(--primary-gradient, linear-gradient(45deg, #0097b2, #7ed957));
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 151, 178, 0.2);
+}
+
+@media (max-width: 768px) {
+  .pratos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .restrictions-grid {
+    justify-content: center;
+  }
+
+  .restriction-item {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.3rem;
+  }
+
+  .prato-descricao {
+    max-height: 150px; /* Altura máxima menor em telas pequenas */
+  }
+
+  .prato-restrictions {
+    margin-bottom: 12px;
+  }
+}
+
+/* Responsividade para modais */
+@media (max-width: 576px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-confirm-delete {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.no-pratos {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.no-pratos img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.no-pratos p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

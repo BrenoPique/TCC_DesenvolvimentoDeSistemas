@@ -1,0 +1,16 @@
+@import url(../global.css);
+@import url(../partials/authUser.css);
+
+#register {
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+.form-group input {
+  padding: 1rem 1.5rem;
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+}

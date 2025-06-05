@@ -1,0 +1,182 @@
+@import url(auth.css);
+body {
+  background: linear-gradient(135deg, #f0f2f5, #e2f3ea);
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.header-section {
+  background: linear-gradient(135deg, #39b54a, #0097b2);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  color: #ffffff;
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-15deg) translateX(-50%);
+}
+
+.brand-message {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.brand-message img {
+  width: 20rem;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.brand-message p {
+  font-size: 1.8rem;
+  max-width: 35rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.header-section a {
+  position: absolute;
+  top: 4rem;
+  z-index: 2;
+}
+
+.header-section a img {
+  width: 5rem;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.header-section a img:hover {
+  transform: translateX(-5px);
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group #buscarCep {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  border: 0.2rem solid #e0e0e0;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.input-group #buscarCep {
+  cursor: pointer;
+  background: linear-gradient(135deg, #39b54a, #0097b2);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.input-group #buscarCep:hover {
+  background: linear-gradient(135deg, #0097b2, #39b54a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(57, 181, 74, 0.2);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #39b54a;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(57, 181, 74, 0.1);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.6rem;
+  background: linear-gradient(135deg, #39b54a, #0097b2);
+  color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(57, 181, 74, 0.2);
+}
+
+#popup-container {
+  position: fixed;
+  top: 1vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .header-section {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .header-section a {
+    left: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .brand-message img {
+    width: 15rem;
+  }
+
+  .brand-message p {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,59 @@
+@import url(keyframes.css);
+@import url(popup.css);
+
+:root {
+  --primary-gradient: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--secondary-color)
+  );
+  --accent-color: #0097b2;
+  --secondary-color: #39b54a;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-radius: 8px;
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: montserrat;
+  color: var(--text-color);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(57, 181, 74, 0.2);
+}
